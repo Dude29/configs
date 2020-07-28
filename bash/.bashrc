@@ -115,3 +115,9 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+# check for an installation of the node.js runtime environment
+if [ -x "$(command -v node)" ]; then
+  # do not allow node to keep the REPL code history
+  export NODE_REPL_HISTORY=""
+fi
