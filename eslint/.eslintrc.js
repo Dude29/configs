@@ -1,27 +1,26 @@
 module.exports = {
-    "env": {
-        "commonjs": true,
-        "es2020": true,
-        "node": true
+    env: {
+        commonjs: true,
+        es2021: true,
+        node: true
     },
 
-    "extends": [
+    extends: [
         "eslint:recommended",
         "plugin:@typescript-eslint/eslint-recommended",
-        "plugin:@typescript-eslint/recommended"
+        "plugin:@typescript-eslint/recommended",
+        // turns off formatting rules delegating this responsibility to prettier
+        "prettier",
     ],
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-        "ecmaVersion": 11
-    },
-    "plugins": [
+    plugins: [
         "@typescript-eslint"
     ],
-    
-    "reportUnusedDisableDirectives": true,
+    parser: "@typescript-eslint/parser",
+
+    reportUnusedDisableDirectives: true,
 
     // RULES
-    "rules": {
+    rules: {
         "indent": [
             "error",
             "tab",
