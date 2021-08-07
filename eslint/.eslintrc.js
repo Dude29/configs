@@ -83,14 +83,6 @@ module.exports = {
         "no-trailing-spaces": "warn",
         "no-unneeded-ternary": "warn",
         "no-whitespace-before-property": "error",
-        "object-curly-newline": [
-            "warn",
-            {
-                "minProperties": 4,
-                "multiline": true,
-                "consistent": false
-            }
-        ],
         "object-property-newline": [
             "warn",
             {
