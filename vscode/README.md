@@ -1,1 +1,1 @@
-These configs are now managed trough [SettingsSync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync)
+These configs are now managed trough the integrated settings sync feature of VS Code
