@@ -25,3 +25,4 @@ gsettings set org.gnome.gedit.preferences.editor wrap-mode 'none'
 gsettings set org.gnome.gedit.preferences.editor ensure-trailing-newline true
 gsettings set org.gnome.gedit.preferences.editor right-margin-position 'uint32 80'
 gsettings set org.gnome.gedit.preferences.editor create-backup-copy false
+gsettings set org.gnome.gedit.preferences.editor display-overview-map true
