@@ -155,9 +155,9 @@ module.exports = {
         "@typescript-eslint/no-require-imports": "warn",
         "@typescript-eslint/no-unused-vars": ["warn", {
             // ignore unused vars when named one or more _
-            "varsIgnorePattern": "^_*$",
-            "argsIgnorePattern": "^_*$",
-            "caughtErrorsIgnorePattern": "^_*$", 
+            "varsIgnorePattern": "^_+.*$",
+            "argsIgnorePattern": "^_+.*$",
+            "caughtErrorsIgnorePattern": "^_+.*$", 
 
             // for cases like this const { unused, ...rest } = props
             "ignoreRestSiblings": true,
