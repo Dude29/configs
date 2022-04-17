@@ -1,6 +1,6 @@
 As of the last time this repo was updated ESLint does not support working with ESM (`import/export`) and only supports CommonJS (`require()`) syntax
 
-As a result if you use a package.json with the `"type":"module"` directive all files at it's level and underneath are automatically considered by `node` to be in ESM which cause any other module that imports them via `require()` to throw an error
+As a result if you use a package.json with the `"type":"module"` directive all modules at it's level and underneath are automatically considered by `node` to be in ESM which causes any other module that imports them via `require()` to throw an error
 
 To fix this you can remove the `"type":"module"` from the package.json or if that's not an option then you can rename the config file to have the `.cjs` extension, indicating to `node` that that file is to be considered written in CommonJS
 
