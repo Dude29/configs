@@ -19,15 +19,49 @@ module.exports = {
 
 	// RULES
 	rules: {
-		indent: [
-			'error',
-			'tab',
+		'import/order': [
+			'warn',
 			{
-				SwitchCase: 1,
+				// prettier-ignore
+				groups: [
+					// https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/order.md#importorder
+					[
+						'builtin',
+						'external',
+					],
+					[
+						'internal',
+						'parent',
+						'sibling',
+						'index',
+						'object',
+						'type',
+					],
+				],
+				pathGroups: [
+					{
+						pattern: '@/*',
+						group: 'internal',
+					},
+					{
+						pattern: '@shadcomponents',
+						group: 'internal',
+					},
+				],
+				'newlines-between': 'always-and-inside-groups',
 			},
 		],
+		'import/newline-after-import': [
+			'warn',
+			{
+				count: 1,
+				exactCount: false,
+				considerComments: false,
+			},
+		],
+		'import/no-unresolved': 'error',
+		'no-empty-function': 'off',
 		'linebreak-style': ['error', 'unix'],
-		quotes: ['warn', 'single'],
 		eqeqeq: ['error', 'smart'],
 		'no-unexpected-multiline': 'warn',
 		'max-len': [
@@ -49,7 +83,7 @@ module.exports = {
 		],
 		'eol-last': ['warn', 'always'],
 		'no-lonely-if': 'warn',
-		'lines-between-class-members': 'error',
+		'lines-between-class-members': 'off',
 		'func-call-spacing': ['error', 'never'],
 		'valid-typeof': 'error',
 		'no-mixed-operators': 'warn',
@@ -62,7 +96,6 @@ module.exports = {
 		],
 		'no-new-object': 'warn',
 		'no-plusplus': 'warn',
-		'no-trailing-spaces': 'warn',
 		'no-unneeded-ternary': 'warn',
 		'no-whitespace-before-property': 'error',
 		'object-property-newline': [
@@ -112,7 +145,7 @@ module.exports = {
 		'no-with': 'warn',
 		'require-await': 'warn',
 		'wrap-iife': 'warn',
-		'comma-dangle': ['warn', 'always-multiline'],
+		'comma-dangle': 'off', // delegate this responsibility to prettier
 		curly: 'warn',
 		'space-infix-ops': 'warn',
 		'comma-spacing': [
@@ -145,5 +178,6 @@ module.exports = {
 				ignoreRestSiblings: true,
 			},
 		],
+		'@typescript-eslint/no-empty-function': 'off',
 	},
 }
