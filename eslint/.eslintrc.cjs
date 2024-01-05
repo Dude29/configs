@@ -180,4 +180,18 @@ module.exports = {
 		],
 		'@typescript-eslint/no-empty-function': 'off',
 	},
+
+	// SETTINGS
+	settings: {
+		// See the link below for explanation
+		// https://github.com/import-js/eslint-import-resolver-typescript#configuration
+		'import/parsers': {
+			'@typescript-eslint/parser': ['.ts', '.tsx'],
+		},
+		'import/resolver': {
+			typescript: {
+				alwaysTryTypes: true,
+			},
+		},
+	},
 }
