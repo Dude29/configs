@@ -6,7 +6,7 @@ module.exports = {
 
 	// indent with tabs
 	useTabs: true,
-	
+
 	// 4 space per tab
 	tabWidth: 4,
 
@@ -18,7 +18,7 @@ module.exports = {
 
 	// only quote object properties if necessary
 	quoteProps: 'as-needed',
-	
+
 	// add trailing commas to object props and array elements
 	trailingComma: 'es5',
 
@@ -26,9 +26,8 @@ module.exports = {
 	bracketSpacing: true,
 
 	// x => {} becomes (x) => {}
-	arrowParens: 'always', 
+	arrowParens: 'always',
 
 	// macOS/Linux style
 	endOfLine: 'lf',
 }
-                                                                                                                       
