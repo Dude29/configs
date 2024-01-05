@@ -157,7 +157,7 @@ module.exports = {
             // ignore unused vars when named one or more _
             "varsIgnorePattern": "^_+.*$",
             "argsIgnorePattern": "^_+.*$",
-            "caughtErrorsIgnorePattern": "^_+.*$", 
+            "caughtErrorsIgnorePattern": "^_+.*$",
 
             // for cases like this const { unused, ...rest } = props
             "ignoreRestSiblings": true,
